@@ -23966,9 +23966,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ba-service-one-arrow-next').on('
 });
 var currentSlide = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ba-service-one-mobile').slick('slickCurrentSlide') + 1; //let slideCount = $(".ba-service-one-mobile").slick("getSlick").slideCount
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ba-service-one-arrows-text').text(currentSlide);
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ba-curent-slide').text(currentSlide);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-service-one-mobile").on("afterChange", function (event, slick, currentSlide, nextSlide) {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-service-one-arrows-text").text(currentSlide + 1);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".ba-curent-slide").text(currentSlide + 1);
 }); // Partners slider
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.ba-partners-slider').slick({

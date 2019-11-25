@@ -49,10 +49,10 @@ $('.ba-service-one-arrow-next').on('click', function() {
 let currentSlide = $('.ba-service-one-mobile').slick('slickCurrentSlide') + 1;
 //let slideCount = $(".ba-service-one-mobile").slick("getSlick").slideCount
 
-$('.ba-service-one-arrows-text').text(currentSlide);
+$('.ba-curent-slide').text(currentSlide);
 
 $(".ba-service-one-mobile").on("afterChange", function(event, slick, currentSlide, nextSlide){
-    $(".ba-service-one-arrows-text").text(currentSlide + 1);
+    $(".ba-curent-slide").text(currentSlide + 1);
 });
 
 
