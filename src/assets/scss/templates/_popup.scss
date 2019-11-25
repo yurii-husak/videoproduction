@@ -1,0 +1,126 @@
+.ba-popup-order-wrapper{
+  max-width: 585px;
+  width: 100%;
+  padding: 0;
+  overflow: visible;
+
+  .ba-order-title{
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-family: $font-family-abold;
+    color: #fff;
+    padding: 10px 30px 10px;
+    background: linear-gradient(to bottom, #3f3f3f, #1d1d1d);
+    text-transform: uppercase;
+    box-shadow: 0px 3px 7px 0px rgba( 0, 0, 0, 0.25 );
+    @include breakpoint(medium) {
+      font-size: 30px;
+      padding: 10px 50px 10px;
+    }
+  }
+
+  .ba-order-form-wrapper{
+    padding: 10px 30px 30px;
+    position: relative;
+    @include breakpoint(medium) {
+      padding: 30px 50px 60px;
+    }
+
+    .ba-order-form{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      @include breakpoint(medium) {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      input{
+        border-radius: 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 14px;
+        color: $secondary-color;
+        letter-spacing: 0.1em;
+        margin: 12px 0;
+
+        &::placeholder{
+          font-size: 14px;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      .order-qty{
+        max-width: 100%;
+        width: 100%;
+        @include breakpoint(medium) {
+          max-width: 100px;
+        }
+      }
+
+      .full-name, .phone{
+        max-width: 100%;
+        width: 100%;
+        @include breakpoint(medium) {
+          max-width: 160px;
+        }
+      }
+
+      .email, .web-site{
+        max-width: 100%;
+        width: 100%;
+        @include breakpoint(medium) {
+          max-width: 230px;
+        }
+      }
+
+      .order-button{
+        width: 200px;
+        height: 50px;
+        background: linear-gradient(to bottom, #e34c4c, #d02020);
+        border-radius: 50px;
+        border: none;
+        font-size: 20px;
+        color: #fff;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-family: $font-family-abold;
+        cursor: pointer;
+        position: absolute;
+        bottom: -37px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+        outline: none;
+        @include breakpoint(medium) {
+          width: 300px;
+          height: 70px;
+          bottom: -47px;
+        }
+
+        &:hover{
+          background: linear-gradient(to bottom, #3f3f3f, #1d1d1d);
+        }
+
+        &:before{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: #000;
+        }
+      }
+    }
+  }
+
+  .fancybox-button svg path{
+    fill: #fff;
+  }
+}

@@ -1,0 +1,408 @@
+.ba-header{
+  background: #3a3a3a;
+  //min-height: 700px;
+  overflow: hidden;
+  position: relative;
+  @include breakpoint(large) {
+    padding-bottom: 105px;
+  }
+
+
+  .ba-header-images{
+    position: relative;
+    z-index: 1;
+
+    .ba-header-girl{
+      position: absolute;
+      top: 60px;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 10;
+      width: 100%;
+      @include breakpoint(medium) {
+        right: 25%;
+      }
+
+      @include breakpoint(large) {
+        top: 0;
+        right: 140px;
+        transform: translateX(60%);
+      }
+    }
+
+    .ba-header-blur{
+      position: absolute;
+      top: 60px;
+      right: 50%;
+      z-index: 9;
+      transform: translateX(50%);
+      width: 100%;
+      @include breakpoint(large) {
+        top: 0;
+        right: -100px;
+        transform: translateX(20%);
+      }
+    }
+  }
+
+  .ba-header-scroll-wrapper{
+    position: relative;
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+    }
+
+    .ba-header-scroll{
+      position: absolute;
+      top: 280px;
+      right: 50px;
+      z-index: 11;
+
+      .ba-header-scroll-link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+
+        img{
+          &:first-child{
+            margin-bottom: 13px;
+            animation-duration: 1.3s;
+          }
+        }
+      }
+    }
+  }
+
+  .ba-header-topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    position: relative;
+    z-index: 2;
+    background: #292929;
+    @include breakpoint(large) {
+      justify-content: flex-start;
+      background: transparent;
+      padding-top: 50px;
+      height: auto;
+    }
+
+
+    a{
+      line-height: 1;
+      color: #f3f0e4;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      font-family: $font-family-ademi;
+      transition: all 0.3s;
+
+      &:hover{
+        opacity: 0.6;
+      }
+    }
+
+    .ba-header-logo{
+      @include breakpoint(large) {
+        margin-right: 40px;
+      }
+    }
+
+    .ba-header-info{
+      .ba-big-phone{
+        font-size: 24px;
+      }
+      
+      .ba-header-mail{
+        text-transform: uppercase;
+        color: #acacac;
+        letter-spacing: 0.2em;
+        font-family: $font-family-abold;
+        margin-top: 5px;
+      }
+      
+      a{
+        display: none;
+        @include breakpoint(large) {
+          display: block;
+        }
+      }
+      
+      .ba-header-phone-icon{
+        display: block;
+        margin-right: 10px;
+        @include breakpoint(large) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.ba-header-socials{
+  position: relative;
+  z-index: 2;
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+    margin: 30px 0 0 0;
+    line-height: 1;
+
+    li{
+      margin-right: 25px;
+
+      a{
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: #f3f0e4;
+        transition: all 0.3s;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0);
+        position: relative;
+
+        i{
+          position: relative;
+          z-index: 2;
+        }
+
+        &:before{
+          content: '';
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(to bottom, #e34c4c, #d12121);
+          z-index: 1;
+          border-radius: 50%;
+          opacity: 0;
+          transition: all 0.3s;
+        }
+
+        &:hover{
+          transition: all 0.5s;
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+
+          &:before{
+            content: '';
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ba-header-video{
+  position: relative;
+  z-index: 3;
+
+  .ba-header-video-wrapper{
+    width: 80px;
+    height: 255px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    @include breakpoint(large) {
+      left: 10px;
+      width: 480px;
+      height: 380px;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.ba-header-content{
+  margin-top: 260px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  max-width: 100%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: auto;
+  right: 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  @include breakpoint(large) {
+    margin-top: 215px;
+  }
+
+  @include breakpoint(1200px) {
+    max-width: 98%;
+  }
+  @include breakpoint(1375px) {
+    max-width: 95%;
+  }
+  @include breakpoint(1510) {
+    max-width: 91%;
+  }
+  @include breakpoint(1650px) {
+    max-width: 87%;
+  }
+  @include breakpoint(1750px) {
+    max-width: 85%;
+  }
+  @include breakpoint(1850px) {
+    max-width: 83%;
+  }
+  @include breakpoint(1950px) {
+    max-width: 81%;
+  }
+  @include breakpoint(2050px) {
+    max-width: 79%;
+  }
+  @include breakpoint(2150px) {
+    max-width: 78%;
+  }
+  @include breakpoint(2250px) {
+    max-width: 77%;
+  }
+  @include breakpoint(2350px) {
+    max-width: 76%;
+  }
+  @include breakpoint(2450px) {
+    max-width: 75%;
+  }
+  @include breakpoint(2550px) {
+    max-width: 74%;
+  }
+  @include breakpoint(2650px) {
+    max-width: 73%;
+  }
+  @include breakpoint(2750px) {
+    max-width: 72%;
+  }
+  @include breakpoint(2850px) {
+    max-width: 71%;
+  }
+  @include breakpoint(2950px) {
+    max-width: 70%;
+  }
+
+  .ba-header-text{
+    padding: 40px 0;
+    @include breakpoint(large) {
+      margin-left: 570px;
+      padding: 30px 0 100px;
+    }
+
+    .ba-header-title{
+      font-family: $font-family-abold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0 20px;
+      @include breakpoint(large) {
+        max-width: 585px;
+        padding: 0;
+      }
+
+      @include breakpoint(1500px) {
+        margin-right: 50px;
+      }
+      @include breakpoint(1700px) {
+        margin-right: 90px;
+      }
+    }
+
+    .ba-header-button{
+      position: relative;
+      transform: translateX(0);
+      left: 0;
+      top: 0;
+      display: block;
+      text-align: -webkit-center;
+      margin-top: 25px;
+      a{
+        width: 280px;
+        @include breakpoint(medium) {
+          
+        }
+
+      }
+
+      @include breakpoint(large) {
+        display: none;
+      }
+    }
+  }
+
+  .ba-header-shops{
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include breakpoint(1500px) {
+      display: flex;
+    }
+  }
+}
+
+.ba-header-button{
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+}
+
+.ba-header-nav{
+  background: #363636;
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
+
+  nav{
+    padding: 0 13px;
+    ul{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      margin: 0;
+
+      li{
+        margin-right: 25px;
+        &:last-child{
+          margin-right: 0;
+        }
+        a{
+          font-size: 11px;
+          font-family: $font-family-abold;
+          display: block;
+          padding: 0;
+          text-transform: uppercase;
+          color: #898989;
+          transition: all 0.3s;
+          
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ba-header-nav-mobile{
+  display: none!important;
+}
